@@ -36,12 +36,14 @@ export async function parsePDF(pdfData: Buffer | Uint8Array): Promise<PDFParseRe
     // before importing the main library. pdfjs checks globalThis.pdfjsWorker first.
     if (typeof window === 'undefined' && !globalThis.pdfjsWorker) {
       console.log('[PDF Parser] Loading PDF worker...');
+      // @ts-expect-error - pdfjs-dist worker module has no type declarations
       const worker = await import('pdfjs-dist/legacy/build/pdf.worker.mjs');
       globalThis.pdfjsWorker = worker;
     }
 
     // Dynamic import for pdfjs-dist to avoid SSR issues
     console.log('[PDF Parser] Loading pdfjs library...');
+    // @ts-expect-error - pdfjs-dist legacy module has no type declarations
     const pdfjsLib = await import('pdfjs-dist/legacy/build/pdf.mjs');
 
     const data = pdfData instanceof Buffer ? new Uint8Array(pdfData) : pdfData;
