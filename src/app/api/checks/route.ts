@@ -1,25 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { auth } from '@/lib/auth';
 import prisma from '@/lib/prisma';
-import { headers } from 'next/headers';
 import { startCheckRunJob } from '@/lib/job-queue';
-import { loadChecklistFromJSON, getChecklistSheet } from '@/lib/checklist-parser';
+import { getChecklistSheet } from '@/lib/checklist-parser';
 
+const ANONYMOUS_USER_ID = 'anonymous';
 
 export async function GET() {
   try {
-    const session = await auth.api.getSession({
-      headers: await headers(),
-    });
-
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Niet ingelogd' }, { status: 401 });
-    }
-
-    const userId = session.user.id;
-
     const checkRuns = await prisma.checkRun.findMany({
-      where: { userId },
+      where: { userId: ANONYMOUS_USER_ID },
       orderBy: { createdAt: 'desc' },
       include: {
         document: {
@@ -61,16 +50,6 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await auth.api.getSession({
-      headers: await headers(),
-    });
-
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Niet ingelogd' }, { status: 401 });
-    }
-
-    const userId = session.user.id;
-
     const { documentId, sheetName } = await request.json();
 
     if (!documentId || !sheetName) {
@@ -80,11 +59,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Verify document exists (no user check for anonymous access)
     const document = await prisma.document.findFirst({
-      where: {
-        id: documentId,
-      },
+      where: { id: documentId },
     });
 
     if (!document) {
@@ -98,7 +74,6 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get checklist from JSON and seed if necessary
     const sheet = getChecklistSheet(sheetName);
     if (!sheet || sheet.items.length === 0) {
       return NextResponse.json(
@@ -107,13 +82,11 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Seed checklist items to database if not exists
     const existingCount = await prisma.checklistItem.count({
       where: { sheetName },
     });
 
     if (existingCount === 0) {
-      // Seed the checklist items for this sheet
       await prisma.$transaction(
         sheet.items.map((item) =>
           prisma.checklistItem.create({
@@ -131,19 +104,15 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const checklistCount = sheet.items.length;
-
-    // Create check run
     const checkRun = await prisma.checkRun.create({
       data: {
-        userId,
+        userId: ANONYMOUS_USER_ID,
         documentId,
         sheetName,
-        totalItems: checklistCount,
+        totalItems: sheet.items.length,
       },
     });
 
-    // Start background job
     startCheckRunJob(checkRun.id);
 
     return NextResponse.json({

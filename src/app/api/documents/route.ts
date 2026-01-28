@@ -1,24 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { auth } from '@/lib/auth';
 import prisma from '@/lib/prisma';
-import { headers } from 'next/headers';
 import { v4 as uuidv4 } from 'uuid';
 
+const ANONYMOUS_USER_ID = 'anonymous';
 
 export async function GET() {
   try {
-    const session = await auth.api.getSession({
-      headers: await headers(),
-    });
-
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Niet ingelogd' }, { status: 401 });
-    }
-
-    const userId = session.user.id;
-
     const documents = await prisma.document.findMany({
-      where: { userId },
+      where: { userId: ANONYMOUS_USER_ID },
       orderBy: { createdAt: 'desc' },
       select: {
         id: true,
@@ -43,16 +32,6 @@ export async function GET() {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await auth.api.getSession({
-      headers: await headers(),
-    });
-
-    if (!session?.user) {
-      return NextResponse.json({ error: 'Niet ingelogd' }, { status: 401 });
-    }
-
-    const userId = session.user.id;
-
     const formData = await request.formData();
     const file = formData.get('file') as File;
 
@@ -75,17 +54,13 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Generate unique filename
     const filename = `${uuidv4()}.pdf`;
-
-    // Read file data
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
-    // Create document record with PDF data stored in database
     const document = await prisma.document.create({
       data: {
-        userId,
+        userId: ANONYMOUS_USER_ID,
         filename,
         originalName: file.name,
         pdfData: buffer,

@@ -205,20 +205,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-[#0a0a0a]">
-      {/* Header */}
-      <header className="border-b border-[#1a1a1a] bg-[#0f0f0f]">
-        <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-[#3b82f6] rounded-lg flex items-center justify-center">
-              <CheckCircle className="w-5 h-5 text-white" />
-            </div>
-            <span className="text-xl font-semibold text-white">SRA Checker</span>
-          </div>
-          <span className="text-sm text-[#a3a3a3]">AI-powered jaarrekening controle</span>
-        </div>
-      </header>
-
-      {/* Main Content */}
       <main className="max-w-4xl mx-auto px-4 py-12">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">
@@ -420,7 +406,6 @@ export default function HomePage() {
         </div>
       </main>
 
-      {/* Footer */}
       <footer className="border-t border-[#1a1a1a] py-6 mt-12">
         <div className="max-w-6xl mx-auto px-4 text-center text-sm text-[#a3a3a3]">
           SRA Checker - AI-powered accountancy compliance tool voor jaarrekeningen

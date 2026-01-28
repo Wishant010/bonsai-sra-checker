@@ -1,25 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { signOut, useSession } from '@/lib/auth-client';
-import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export function Header() {
-  const router = useRouter();
-  const { data: session, isPending } = useSession();
-
-  const handleSignOut = async () => {
-    await signOut({
-      fetchOptions: {
-        onSuccess: () => {
-          router.push('/login');
-          router.refresh();
-        },
-      },
-    });
-  };
-
   return (
     <header className="sticky top-0 z-50 w-full border-b border-[#2a2a2a] bg-[#0f0f0f]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0f0f0f]/60">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -43,36 +26,7 @@ export function Header() {
             SRA Checker
           </span>
         </Link>
-
-        <nav className="flex items-center gap-4">
-          {isPending ? (
-            <div className="h-9 w-20 bg-[#262626] rounded-lg animate-pulse" />
-          ) : session?.user ? (
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-3">
-                <div className="text-right">
-                  <p className="text-sm font-medium text-[#f5f5f5]">
-                    {session.user.name || session.user.email}
-                  </p>
-                </div>
-                <Button variant="outline" size="sm" onClick={handleSignOut}>
-                  Uitloggen
-                </Button>
-              </div>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3">
-              <Link href="/login">
-                <Button variant="ghost" size="sm">
-                  Inloggen
-                </Button>
-              </Link>
-              <Link href="/register">
-                <Button size="sm">Registreren</Button>
-              </Link>
-            </div>
-          )}
-        </nav>
+        <span className="text-sm text-[#a3a3a3]">AI-powered jaarrekening controle</span>
       </div>
     </header>
   );
