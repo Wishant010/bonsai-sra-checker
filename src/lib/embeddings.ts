@@ -1,12 +1,19 @@
 import OpenAI from 'openai';
 import prisma from './prisma';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 const EMBEDDING_MODEL = 'text-embedding-3-small';
 const EMBEDDING_DIMENSIONS = 1536;
+
+// Lazy initialization to avoid crash when OPENAI_API_KEY is not set at build time
+let _openai: OpenAI | null = null;
+function getOpenAI(): OpenAI {
+  if (!_openai) {
+    _openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return _openai;
+}
 
 /**
  * Generate embeddings for text using OpenAI
@@ -16,7 +23,7 @@ export async function generateEmbedding(text: string): Promise<number[]> {
     throw new Error('OPENAI_API_KEY is not configured');
   }
 
-  const response = await openai.embeddings.create({
+  const response = await getOpenAI().embeddings.create({
     model: EMBEDDING_MODEL,
     input: text.slice(0, 8000), // Limit input length
   });
@@ -45,7 +52,7 @@ export async function generateEmbeddings(texts: string[]): Promise<number[][]> {
 
     console.log(`[Embeddings] Processing batch ${batchNum}/${totalBatches} (${batch.length} texts)`);
 
-    const response = await openai.embeddings.create({
+    const response = await getOpenAI().embeddings.create({
       model: EMBEDDING_MODEL,
       input: batch,
     });
