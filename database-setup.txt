@@ -1,0 +1,153 @@
+-- SRA Checker Database Schema for Supabase
+-- Copy and paste this entire content into your Supabase SQL Editor
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+CREATE TABLE IF NOT EXISTS "User" (
+    "id" TEXT PRIMARY KEY,
+    "email" TEXT NOT NULL UNIQUE,
+    "name" TEXT,
+    "emailVerified" BOOLEAN NOT NULL DEFAULT false,
+    "image" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS "Passkey" (
+    "id" TEXT PRIMARY KEY,
+    "name" TEXT,
+    "publicKey" TEXT NOT NULL,
+    "userId" TEXT NOT NULL,
+    "credentialID" TEXT NOT NULL UNIQUE,
+    "counter" INTEGER NOT NULL,
+    "deviceType" TEXT NOT NULL,
+    "backedUp" BOOLEAN NOT NULL,
+    "transports" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Passkey_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS "Session" (
+    "id" TEXT PRIMARY KEY,
+    "userId" TEXT NOT NULL,
+    "token" TEXT NOT NULL UNIQUE,
+    "expiresAt" TIMESTAMP(3) NOT NULL,
+    "ipAddress" TEXT,
+    "userAgent" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Session_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS "Account" (
+    "id" TEXT PRIMARY KEY,
+    "userId" TEXT NOT NULL,
+    "accountId" TEXT NOT NULL,
+    "providerId" TEXT NOT NULL,
+    "accessToken" TEXT,
+    "refreshToken" TEXT,
+    "accessTokenExpiresAt" TIMESTAMP(3),
+    "refreshTokenExpiresAt" TIMESTAMP(3),
+    "scope" TEXT,
+    "idToken" TEXT,
+    "password" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "Account_userId_fkey" FOREIGN KEY ("userId") REFERENCES "User"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS "Verification" (
+    "id" TEXT PRIMARY KEY,
+    "identifier" TEXT NOT NULL,
+    "value" TEXT NOT NULL,
+    "expiresAt" TIMESTAMP(3) NOT NULL,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE IF NOT EXISTS "Document" (
+    "id" TEXT PRIMARY KEY,
+    "userId" TEXT NOT NULL,  -- Can be 'anonymous' for unauthenticated uploads
+    "filename" TEXT NOT NULL,
+    "originalName" TEXT NOT NULL,
+    "storagePath" TEXT NOT NULL,
+    "mimeType" TEXT NOT NULL,
+    "size" INTEGER NOT NULL,
+    "pageCount" INTEGER NOT NULL DEFAULT 0,
+    "processed" BOOLEAN NOT NULL DEFAULT false,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP
+    -- No foreign key constraint to allow anonymous uploads
+);
+
+CREATE TABLE IF NOT EXISTS "DocumentChunk" (
+    "id" TEXT PRIMARY KEY,
+    "documentId" TEXT NOT NULL,
+    "pageNumber" INTEGER NOT NULL,
+    "chunkIndex" INTEGER NOT NULL,
+    "content" TEXT NOT NULL,
+    "embedding" TEXT,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "DocumentChunk_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Document"("id") ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS "ChecklistItem" (
+    "id" TEXT PRIMARY KEY,
+    "sheetName" TEXT NOT NULL,
+    "checkId" TEXT NOT NULL,
+    "checkText" TEXT NOT NULL,
+    "category" TEXT,
+    "wettelijkeBasis" TEXT,  -- Legal basis (e.g., "art. 2:364 BW")
+    "applicableTypes" TEXT NOT NULL,
+    "order" INTEGER NOT NULL DEFAULT 0,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "ChecklistItem_sheetName_checkId_key" UNIQUE ("sheetName", "checkId")
+);
+
+CREATE TABLE IF NOT EXISTS "CheckRun" (
+    "id" TEXT PRIMARY KEY,
+    "userId" TEXT NOT NULL,  -- Can be 'anonymous' for unauthenticated runs
+    "documentId" TEXT NOT NULL,
+    "sheetName" TEXT NOT NULL,
+    "status" TEXT NOT NULL DEFAULT 'pending',
+    "progress" INTEGER NOT NULL DEFAULT 0,
+    "totalItems" INTEGER NOT NULL DEFAULT 0,
+    "error" TEXT,
+    "startedAt" TIMESTAMP(3),
+    "completedAt" TIMESTAMP(3),
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    "updatedAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "CheckRun_documentId_fkey" FOREIGN KEY ("documentId") REFERENCES "Document"("id") ON DELETE CASCADE ON UPDATE CASCADE
+    -- No userId foreign key to allow anonymous runs
+);
+
+CREATE TABLE IF NOT EXISTS "CheckResult" (
+    "id" TEXT PRIMARY KEY,
+    "checkRunId" TEXT NOT NULL,
+    "checklistItemId" TEXT NOT NULL,
+    "status" TEXT NOT NULL,
+    "reasoning" TEXT NOT NULL,
+    "evidence" TEXT NOT NULL,
+    "confidence" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "processingTime" INTEGER,
+    "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT "CheckResult_checkRunId_fkey" FOREIGN KEY ("checkRunId") REFERENCES "CheckRun"("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "CheckResult_checklistItemId_fkey" FOREIGN KEY ("checklistItemId") REFERENCES "ChecklistItem"("id") ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT "CheckResult_checkRunId_checklistItemId_key" UNIQUE ("checkRunId", "checklistItemId")
+);
+
+CREATE INDEX IF NOT EXISTS "DocumentChunk_documentId_pageNumber_idx" ON "DocumentChunk"("documentId", "pageNumber");
+CREATE INDEX IF NOT EXISTS "ChecklistItem_sheetName_idx" ON "ChecklistItem"("sheetName");
+CREATE INDEX IF NOT EXISTS "CheckRun_userId_status_idx" ON "CheckRun"("userId", "status");
+CREATE INDEX IF NOT EXISTS "CheckResult_checkRunId_idx" ON "CheckResult"("checkRunId");
+
+-- ============================================
+-- MIGRATION: If you already have the old schema, run these:
+-- ============================================
+
+-- Drop foreign key constraints to allow anonymous access
+ALTER TABLE IF EXISTS "Document" DROP CONSTRAINT IF EXISTS "Document_userId_fkey";
+ALTER TABLE IF EXISTS "CheckRun" DROP CONSTRAINT IF EXISTS "CheckRun_userId_fkey";
+
+-- Add wettelijkeBasis column to ChecklistItem if it doesn't exist
+ALTER TABLE "ChecklistItem" ADD COLUMN IF NOT EXISTS "wettelijkeBasis" TEXT;

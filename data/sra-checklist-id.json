@@ -1,0 +1,1359 @@
+{
+  "metadata": {
+    "description": "SRA Checklist Jaarrekening MKB 2024 - Alleen items voor KLEINE rechtspersonen (type: i+d)",
+    "type": "i+d",
+    "typeDescription": "i = Inrichtingsjaarrekening, d = Deponeringsjaarrekening",
+    "source": "SRA (Samenwerkende Registeraccountants en Accountants-Administratieconsulenten)",
+    "year": 2024,
+    "targetGroup": "Kleine rechtspersonen"
+  },
+  "sheets": [
+    {
+      "sheetName": "Grondslagen en uitgangspunten",
+      "items": [
+        {
+          "checkId": "GRD-001",
+          "checkText": "De grondslagen van waardering van activa en passiva en de resultaatbepaling moeten worden opgenomen.",
+          "category": "Grondslagen - Algemeen",
+          "wettelijkeBasis": "BW 2:384,5"
+        },
+        {
+          "checkId": "GRD-002",
+          "checkText": "Ook de consolidatiegrondslagen worden uiteengezet, indien van toepassing.",
+          "category": "Grondslagen - Consolidatie",
+          "wettelijkeBasis": "RJ 300.103, RJkB18.102"
+        },
+        {
+          "checkId": "GRD-003",
+          "checkText": "Toelichting bij toepassing fiscale grondslagen betreft onder meer het noemen van posten met een materieel verschil met de commerciële waardering.",
+          "category": "Grondslagen - Fiscaal",
+          "wettelijkeBasis": "RjK D3.2.309"
+        },
+        {
+          "checkId": "GRD-004",
+          "checkText": "Indien nodig voor het inzicht moet bij historische prijsgrondslag een materieel verschil met de actuele waarde worden toegelicht.",
+          "category": "Grondslagen - Waardering",
+          "wettelijkeBasis": "RJ 115.220"
+        },
+        {
+          "checkId": "GRD-005",
+          "checkText": "De inrichtings- en publicatievoorschriften voor kleine rechtspersonen zijn opgenomen in een nieuw hoofdstuk van de RJk.",
+          "category": "Grondslagen - Voorschriften",
+          "wettelijkeBasis": "RJk D4"
+        },
+        {
+          "checkId": "GRD-006",
+          "checkText": "Bij toepassing van fiscale waarderingsgrondslagen mogen de grenzen op die grondslag worden bepaald.",
+          "category": "Grondslagen - Fiscaal",
+          "wettelijkeBasis": "RJk D3.2.104"
+        },
+        {
+          "checkId": "GRD-007",
+          "checkText": "Indien de discontinuïteit onontkoombaar is, wordt gewaardeerd op liquidatiebasis. Het verschil met de waardering op continuïteitbasis moet worden vermeld.",
+          "category": "Grondslagen - Continuïteit",
+          "wettelijkeBasis": "RJ 170.201"
+        },
+        {
+          "checkId": "GRD-008",
+          "checkText": "Indien ná balansdatum, maar vóór het opmaken van de jaarrekening, blijkt dat discontinuïteit onontkoombaar is, worden de gevolgen in de nog op te maken jaarrekening verwerkt.",
+          "category": "Grondslagen - Continuïteit",
+          "wettelijkeBasis": "RJ 170.102"
+        },
+        {
+          "checkId": "GRD-009",
+          "checkText": "Indien 'gerede twijfel' (is materiële onzekerheid) over de continuïteit bestaat, wordt dit onder mededeling van de invloed op het vermogen en resultaat uiteengezet in de toelichting. NIEUW IN 2024: In de bijlage van RJ 170 worden vier continuïteitsscenario's en de relevante verslaggevingsvoorschriften per scenario beschreven.",
+          "category": "Grondslagen - Continuïteit",
+          "wettelijkeBasis": "BW 2:384,3"
+        },
+        {
+          "checkId": "GRD-010",
+          "checkText": "Bij oprichting voor bepaalde tijd of bij besluit tot liquidatie moet dit feit toegelicht worden.",
+          "category": "Grondslagen - Continuïteit",
+          "wettelijkeBasis": "RJ 170.104, RJk A2.213a"
+        },
+        {
+          "checkId": "GRD-011",
+          "checkText": "GEWIJZIGD IN 2024: Op basis van het geheel van de feiten en omstandigheden, inclusief de mate van aannemelijkheid van aanvullende medewerking van belanghebbenden, wordt beoordeeld of er sprake is van materiële onzekerheid over de continuïteit. In specifieke situaties is het dan mogelijk dat ondanks dat de medewerking van belanghebbenden nog niet geheel zeker is, maar wel in (hoge) mate waarschijnlijk, er toch geen materiële onzekerheid over de continuïteit resteert. Als sprake is van materiële onzekerheid, dan moet de situatie adequaat toegelicht worden.",
+          "category": "Grondslagen - Continuïteit",
+          "wettelijkeBasis": "RJ 170.302"
+        },
+        {
+          "checkId": "GRD-012",
+          "checkText": "De grondslagen van de omrekening dienen te worden uiteengezet.",
+          "category": "Grondslagen - Omrekening",
+          "wettelijkeBasis": "BW 2:384,5"
+        },
+        {
+          "checkId": "GRD-013",
+          "checkText": "Uit de jaarrekening moeten de bedragen blijken van het eigen vermogen en het resultaat.",
+          "category": "Grondslagen - Presentatie",
+          "wettelijkeBasis": "RJ 121.801, BW 2:387,4"
+        },
+        {
+          "checkId": "GRD-014",
+          "checkText": "De reden wordt uiteengezet in de toelichting, evenals de betekenis voor vermogen en resultaat door middel van aangepaste cijfers.",
+          "category": "Grondslagen - Presentatie",
+          "wettelijkeBasis": "RJ 121.801"
+        },
+        {
+          "checkId": "GRD-015",
+          "checkText": "Behalve voor de waardering geldt dat ook voor de indeling van posten.",
+          "category": "Grondslagen - Presentatie",
+          "wettelijkeBasis": "RJ 121.801"
+        },
+        {
+          "checkId": "GRD-016",
+          "checkText": "Herstel van de materiële fout moet plaatsvinden in de eerste nog niet vastgestelde jaarrekening. De gevolgen van het foutherstel worden in het vermogen verwerkt. Dit gebeurt, zowel in het eigen vermogen aan het einde van het voorafgaande boekjaar als met een rechtstreekse mutatie in het eigen vermogen aan het begin van het boekjaar waarin foutherstel plaatsvindt (retrospectief).",
+          "category": "Grondslagen - Foutherstel",
+          "wettelijkeBasis": "RJ 150.202"
+        },
+        {
+          "checkId": "GRD-017",
+          "checkText": "Vermeld wordt dat sprake is van een materiële fout, het effect en de aard en omvang ervan.",
+          "category": "Grondslagen - Foutherstel",
+          "wettelijkeBasis": "RJ 150.204"
+        },
+        {
+          "checkId": "GRD-018",
+          "checkText": "De vergelijkende cijfers worden aangepast.",
+          "category": "Grondslagen - Foutherstel",
+          "wettelijkeBasis": "RJ 150.205"
+        },
+        {
+          "checkId": "GRD-019",
+          "checkText": "Dit geldt eveneens voor opgenomen meerjarenoverzichten, tenzij dit praktisch niet mogelijk is.",
+          "category": "Grondslagen - Foutherstel",
+          "wettelijkeBasis": "RJ 150.206"
+        }
+      ]
+    },
+    {
+      "sheetName": "Immateriële vaste activa",
+      "items": [
+        {
+          "checkId": "IMA-001",
+          "checkText": "Totaal van de post immateriële vaste activa is vermeld.",
+          "category": "Immateriële vaste activa - Presentatie",
+          "wettelijkeBasis": "BW 2:365"
+        },
+        {
+          "checkId": "IMA-002",
+          "checkText": "Kosten van oprichting en uitgifte van aandelen zijn afzonderlijk vermeld indien van toepassing.",
+          "category": "Immateriële vaste activa - Presentatie",
+          "wettelijkeBasis": "BW 2:365"
+        },
+        {
+          "checkId": "IMA-003",
+          "checkText": "Grondslagen van waardering voor de bepaling van de kostprijs en/of de actuele waarde worden uiteengezet.",
+          "category": "Immateriële vaste activa - Grondslagen",
+          "wettelijkeBasis": "BW 2:384,5, BW 2:386,2"
+        },
+        {
+          "checkId": "IMA-004",
+          "checkText": "Daarnaast wordt de boekwaarde van activa met beperking van eigendomsrecht of zekerheidstelling in de toelichting vermeld.",
+          "category": "Immateriële vaste activa - Toelichting",
+          "wettelijkeBasis": "RJ 210.505, RJk B1.119"
+        },
+        {
+          "checkId": "IMA-005",
+          "checkText": "Som der herwaarderingen is vermeld.",
+          "category": "Immateriële vaste activa - Herwaardering",
+          "wettelijkeBasis": "BW 2:365"
+        },
+        {
+          "checkId": "IMA-006",
+          "checkText": "De redenen dat de gebruiksduur niet betrouwbaar kan worden geschat worden toegelicht.",
+          "category": "Immateriële vaste activa - Afschrijving",
+          "wettelijkeBasis": "BW 2:386,3"
+        }
+      ]
+    },
+    {
+      "sheetName": "Materiële vaste activa",
+      "items": [
+        {
+          "checkId": "MVA-001",
+          "checkText": "Totaal van de post materiële vaste activa is vermeld.",
+          "category": "Materiële vaste activa - Presentatie",
+          "wettelijkeBasis": "BW 2:366"
+        },
+        {
+          "checkId": "MVA-002",
+          "checkText": "Som der herwaarderingen is vermeld.",
+          "category": "Materiële vaste activa - Herwaardering",
+          "wettelijkeBasis": "BW 2:366"
+        },
+        {
+          "checkId": "MVA-003",
+          "checkText": "Grondslagen van waardering en afschrijvingsmethode zijn toegelicht.",
+          "category": "Materiële vaste activa - Grondslagen",
+          "wettelijkeBasis": "BW 2:384,5, BW 2:386,2"
+        },
+        {
+          "checkId": "MVA-004",
+          "checkText": "Geactiveerde rente over vreemd vermogen is toegelicht indien van toepassing.",
+          "category": "Materiële vaste activa - Toelichting",
+          "wettelijkeBasis": "BW 2:388,2"
+        },
+        {
+          "checkId": "MVA-005",
+          "checkText": "Welke activa als zekerheid dienen voor verplichtingen voor het totaal van de in BW 2:375,1 genoemde schulden is vermeld.",
+          "category": "Materiële vaste activa - Zekerheden",
+          "wettelijkeBasis": "BW 2:375,3"
+        },
+        {
+          "checkId": "MVA-006",
+          "checkText": "De wijze van verwerking van kosten van herstel en van groot onderhoud (in boekwaarde of in voorziening) is toegelicht.",
+          "category": "Materiële vaste activa - Onderhoud",
+          "wettelijkeBasis": "RJ 212.701, RJ 212.445"
+        },
+        {
+          "checkId": "MVA-007",
+          "checkText": "Bij vastgoedbeleggingen: toegepaste grondslagen zijn vermeld.",
+          "category": "Materiële vaste activa - Vastgoed",
+          "wettelijkeBasis": "RJ 213.802"
+        },
+        {
+          "checkId": "MVA-008",
+          "checkText": "Bij vastgoedbeleggingen: de som van herwaarderingen (bij actuele waarde) is vermeld.",
+          "category": "Materiële vaste activa - Vastgoed",
+          "wettelijkeBasis": "RJ 213.803, RJk B2.211"
+        },
+        {
+          "checkId": "MVA-009",
+          "checkText": "Bij financiële lease: het totaalbedrag van de verplichting langer dan 1 jaar is toegelicht (en voor het totaal aan schulden het bedrag langer dan 5 jaar).",
+          "category": "Materiële vaste activa - Leasing",
+          "wettelijkeBasis": "BW 2:375,2"
+        },
+        {
+          "checkId": "MVA-010",
+          "checkText": "Bij operationele lease worden de leasetermijnen als kosten geboekt. Onder de niet in de balans opgenomen verplichtingen worden de contractueel te betalen leasetermijnen vermeld, mits materieel van omvang.",
+          "category": "Materiële vaste activa - Leasing",
+          "wettelijkeBasis": "RJ 292.211"
+        }
+      ]
+    },
+    {
+      "sheetName": "Financiële vaste activa",
+      "items": [
+        {
+          "checkId": "FVA-001",
+          "checkText": "Verwerking positieve goodwill: activeren en afschrijven naargelang de verwachte gebruiksduur, tenzij de gebruiksduur niet op betrouwbare wijze kan worden vastgesteld (dan afschrijven in maximaal 10 jaar). De redenen daarvoor worden toegelicht.",
+          "category": "Financiële vaste activa - Goodwill",
+          "wettelijkeBasis": "BW 2:386,3"
+        },
+        {
+          "checkId": "FVA-002",
+          "checkText": "Afschrijving over meer dan 20 jaar vereist vermelding van de reden, waaronder factoren die een significante rol spelen bij de bepaling van de levensduur. De realiseerbare waarde dient dan jaarlijks te worden bepaald.",
+          "category": "Financiële vaste activa - Goodwill",
+          "wettelijkeBasis": "RJ 216.403, RJ 210.419"
+        },
+        {
+          "checkId": "FVA-003",
+          "checkText": "Totaal financiële vaste activa is vermeld.",
+          "category": "Financiële vaste activa - Presentatie",
+          "wettelijkeBasis": "BW 2:367"
+        },
+        {
+          "checkId": "FVA-004",
+          "checkText": "Som van de herwaarderingen per einde boekjaar is vermeld.",
+          "category": "Financiële vaste activa - Herwaardering",
+          "wettelijkeBasis": "BW 2:368,2a"
+        },
+        {
+          "checkId": "FVA-005",
+          "checkText": "De waarderingsgrondslag wordt vermeld.",
+          "category": "Financiële vaste activa - Grondslagen",
+          "wettelijkeBasis": "BW 2:384,5"
+        },
+        {
+          "checkId": "FVA-006",
+          "checkText": "Als deelnemingen niet tegen netto-vermogenswaarde worden gewaardeerd, moet dit feit worden gemeld.",
+          "category": "Financiële vaste activa - Deelnemingen",
+          "wettelijkeBasis": "BW 2:389,3"
+        },
+        {
+          "checkId": "FVA-007",
+          "checkText": "Toelichting op onbeperkte aansprakelijkheid als vennoot.",
+          "category": "Financiële vaste activa - Kapitaalbelangen",
+          "wettelijkeBasis": "RJ 214.617"
+        },
+        {
+          "checkId": "FVA-008",
+          "checkText": "Van effecten hoe met niet duurzame waardeverminderingen rekening wordt gehouden.",
+          "category": "Financiële vaste activa - Effecten",
+          "wettelijkeBasis": "BW 2:387,3"
+        },
+        {
+          "checkId": "FVA-009",
+          "checkText": "Van belangen zoals vermeld in BW 2:414,1 (consolidatie): naam en woonplaats.",
+          "category": "Financiële vaste activa - Deelnemingen",
+          "wettelijkeBasis": "BW 2:414"
+        },
+        {
+          "checkId": "FVA-010",
+          "checkText": "Het deel van de vorderingen dat binnen 12 maanden opeisbaar wordt moet worden toegelicht of worden afgesplitst en onder kortlopende vorderingen worden opgenomen.",
+          "category": "Financiële vaste activa - Vorderingen",
+          "wettelijkeBasis": "RJ 190.207"
+        },
+        {
+          "checkId": "FVA-011",
+          "checkText": "De wijze van presentatie moet worden uiteengezet.",
+          "category": "Financiële vaste activa - Presentatie",
+          "wettelijkeBasis": "RJk A2.107"
+        },
+        {
+          "checkId": "FVA-012",
+          "checkText": "Van de vorderingen op bestuurders en commissarissen wordt vermeld: openstaande bedragen.",
+          "category": "Financiële vaste activa - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "FVA-013",
+          "checkText": "Van de vorderingen op bestuurders en commissarissen wordt vermeld: rentevoet.",
+          "category": "Financiële vaste activa - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "FVA-014",
+          "checkText": "Van de vorderingen op bestuurders en commissarissen wordt vermeld: belangrijkste bepalingen.",
+          "category": "Financiële vaste activa - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "FVA-015",
+          "checkText": "Van de vorderingen op bestuurders en commissarissen wordt vermeld: aflossingen in het boekjaar.",
+          "category": "Financiële vaste activa - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "FVA-016",
+          "checkText": "Van de vorderingen op bestuurders en commissarissen wordt vermeld: afgewaardeerde bedragen en bedragen waarvan werd afgezien.",
+          "category": "Financiële vaste activa - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        }
+      ]
+    },
+    {
+      "sheetName": "Voorraden",
+      "items": [
+        {
+          "checkId": "VRD-001",
+          "checkText": "Totaal van de post voorraden is vermeld.",
+          "category": "Voorraden - Presentatie",
+          "wettelijkeBasis": "BW 2:369"
+        },
+        {
+          "checkId": "VRD-002",
+          "checkText": "De gehanteerde grondslagen voor waardering en resultaatbepaling, waaronder de gebruikte kostprijsmethode ex art. 2:385,2 (zoals FIFO) zijn vermeld.",
+          "category": "Voorraden - Grondslagen",
+          "wettelijkeBasis": "RJ 220.601"
+        },
+        {
+          "checkId": "VRD-003",
+          "checkText": "Het feit dat rente over vreemd vermogen is geactiveerd is vermeld indien van toepassing.",
+          "category": "Voorraden - Grondslagen",
+          "wettelijkeBasis": "RJ 220.601"
+        },
+        {
+          "checkId": "VRD-004",
+          "checkText": "De wijze van bepaling van de (lagere) opbrengstwaarde is vermeld.",
+          "category": "Voorraden - Grondslagen",
+          "wettelijkeBasis": "RJ 220.601, RJk B4.110"
+        },
+        {
+          "checkId": "VRD-005",
+          "checkText": "Bij agrarische voorraden die op actuele waarde worden gewaardeerd: de wijze van bepaling van de opbrengstwaarde is vermeld.",
+          "category": "Voorraden - Agrarisch",
+          "wettelijkeBasis": "BW 384,5"
+        },
+        {
+          "checkId": "VRD-006",
+          "checkText": "Onderhanden projecten in opdracht van derden worden als aparte categorie tussen voorraden en vorderingen gepresenteerd. Of -ingeval van een creditstand- als kortlopende schuld.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.409"
+        },
+        {
+          "checkId": "VRD-007",
+          "checkText": "De onderhanden projecten in de balans worden als een gesaldeerde post van de per project gerealiseerde projectopbrengsten, verminderd met verwerkte verliezen en gedeclareerde termijnen gepresenteerd.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.409"
+        },
+        {
+          "checkId": "VRD-008",
+          "checkText": "Wanneer het saldo van een onderhanden project een debetstand vertoont, wordt het netto-bedrag verwerkt als een actief.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.409"
+        },
+        {
+          "checkId": "VRD-009",
+          "checkText": "Wanneer het saldo van een onderhanden project een creditstand vertoont, wordt het netto-bedrag verwerkt als een verplichting.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.409"
+        },
+        {
+          "checkId": "VRD-010",
+          "checkText": "De wet geeft de keuze uit het categoriale model en het functionele model voor de verwerking van winsten en verliezen.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "BW 2:377,3 en 2:377,4"
+        },
+        {
+          "checkId": "VRD-011",
+          "checkText": "Een verlieslatend contract wordt gebaseerd op de onvermijdbare kosten die ten minste moeten worden gemaakt om de overeenkomst te kunnen beëindigen. Het gaat om een verlies op contractsniveau.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.323"
+        },
+        {
+          "checkId": "VRD-012",
+          "checkText": "De gebruikte winstnemingsmethode en de methode van schatting van het percentage gereedheid worden vermeld.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.414, RJk B5.327, BW 384,5"
+        },
+        {
+          "checkId": "VRD-013",
+          "checkText": "De duur van de overeenkomst brengt met zich mee dat dergelijke projecten worden verwerkt als financieel actief of als immaterieel actief.",
+          "category": "Voorraden - Onderhanden projecten",
+          "wettelijkeBasis": "RJ 221.507"
+        }
+      ]
+    },
+    {
+      "sheetName": "Vorderingen en overlopende activa",
+      "items": [
+        {
+          "checkId": "VOR-001",
+          "checkText": "Totaal van de post vorderingen is vermeld.",
+          "category": "Vorderingen - Presentatie",
+          "wettelijkeBasis": "BW 2:370"
+        },
+        {
+          "checkId": "VOR-002",
+          "checkText": "Opgevraagde kapitaalstortingen zijn vermeld indien van toepassing.",
+          "category": "Vorderingen - Presentatie",
+          "wettelijkeBasis": "BW 2:370"
+        },
+        {
+          "checkId": "VOR-003",
+          "checkText": "Voor kleine rechtspersonen geldt dit alleen voor het totaalbedrag.",
+          "category": "Vorderingen - Presentatie",
+          "wettelijkeBasis": "BW 2:396"
+        },
+        {
+          "checkId": "VOR-004",
+          "checkText": "Creditsaldi van debiteuren dienen onder crediteuren te worden opgenomen.",
+          "category": "Vorderingen - Presentatie",
+          "wettelijkeBasis": "RJ 222.101"
+        },
+        {
+          "checkId": "VOR-005",
+          "checkText": "Kortlopende leningen en voorschotten aan bestuurders en commissarissen moeten afzonderlijk worden vermeld. De informatie betreft: bedrag, rentevoet, belangrijkste bepalingen, aflossing gedurende het boekjaar en afgewaardeerde bedragen of bedragen waarvan werd afgezien.",
+          "category": "Vorderingen - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        }
+      ]
+    },
+    {
+      "sheetName": "Effecten",
+      "items": [
+        {
+          "checkId": "EFF-001",
+          "checkText": "Totaal van de post effecten is vermeld.",
+          "category": "Effecten - Presentatie",
+          "wettelijkeBasis": "BW 2:371"
+        },
+        {
+          "checkId": "EFF-002",
+          "checkText": "De waarderingsgrondslagen moeten worden vermeld.",
+          "category": "Effecten - Grondslagen",
+          "wettelijkeBasis": "RJ 214.602"
+        }
+      ]
+    },
+    {
+      "sheetName": "Liquide middelen",
+      "items": [
+        {
+          "checkId": "LIQ-001",
+          "checkText": "Totaal van de post liquide middelen is vermeld.",
+          "category": "Liquide middelen - Presentatie",
+          "wettelijkeBasis": "BW 2:372"
+        },
+        {
+          "checkId": "LIQ-002",
+          "checkText": "Wanneer liquide middelen langer dan 12 maanden niet ter vrije beschikking staan, dienen zij onder financiële vaste activa te worden opgenomen.",
+          "category": "Liquide middelen - Classificatie",
+          "wettelijkeBasis": "RJ 228.301"
+        }
+      ]
+    },
+    {
+      "sheetName": "Niet in de balans opgenomen activa",
+      "items": [
+        {
+          "checkId": "NBA-001",
+          "checkText": "Vermeld wordt tot welke voorwaardelijke activa de rechtspersoon is verbonden.",
+          "category": "Niet in balans opgenomen activa - Presentatie",
+          "wettelijkeBasis": "BW 2:381,1"
+        }
+      ]
+    },
+    {
+      "sheetName": "Eigen vermogen",
+      "items": [
+        {
+          "checkId": "EV-001",
+          "checkText": "Totaal eigen vermogen (enkelvoudige jaarrekening) is vermeld.",
+          "category": "Eigen vermogen - Presentatie",
+          "wettelijkeBasis": "BW 2:364"
+        },
+        {
+          "checkId": "EV-002",
+          "checkText": "Geplaatst en gestort kapitaal is vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-003",
+          "checkText": "Agio is vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-004",
+          "checkText": "Herwaarderingsreserve is vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-005",
+          "checkText": "Andere wettelijke reserves (gesplitst naar aard) zijn vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-006",
+          "checkText": "Statutaire reserves zijn vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-007",
+          "checkText": "Overige reserves zijn vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-008",
+          "checkText": "Niet verdeelde winsten zijn vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-009",
+          "checkText": "Ingehouden deel jaarwinst is vermeld.",
+          "category": "Eigen vermogen - Indeling",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-010",
+          "checkText": "Verloopoverzicht van alleen herwaarderingsreserves en, alleen voor nv, mutaties eigen aandelen is opgenomen.",
+          "category": "Eigen vermogen - Verloop",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-011",
+          "checkText": "Opgesteld voor of na voorgestelde winstbestemming is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "RJ 420.101, RJk A8.103"
+        },
+        {
+          "checkId": "EV-012",
+          "checkText": "Wijze van storting in het jaar is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-013",
+          "checkText": "Storting op aandelen anders dan geld in het boekjaar is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-014",
+          "checkText": "Totaalbedrag geplaatste aandelen per soort is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-015",
+          "checkText": "Aantal en bedrag tijdens boekjaar geplaatste aandelen is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-016",
+          "checkText": "Aantal en bedrag gehouden eigen aandelen (incl. dochtermaatschappijen) is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-017",
+          "checkText": "Op welke post gehouden eigen aandelen in mindering zijn gebracht is vermeld.",
+          "category": "Eigen vermogen - Vermelding",
+          "wettelijkeBasis": "BW 2:396,5"
+        },
+        {
+          "checkId": "EV-018",
+          "checkText": "Van achterstallig dividend op cumulatief-preferente aandelen de omvang en, indien van toepassing, het ontbreken van de goedkeuring tot uitkering is vermeld.",
+          "category": "Eigen vermogen - Dividend",
+          "wettelijkeBasis": "RJ 240.241, RJk B8.130"
+        },
+        {
+          "checkId": "EV-019",
+          "checkText": "Het verbonden zijn tot kopen van (eigen) aandelen door de rechtspersoon of een dochtermaatschappij daarvan moet worden toegelicht met minimaal vermelding van nominale waarde en de overeengekomen prijs.",
+          "category": "Eigen vermogen - Inkoop aandelen",
+          "wettelijkeBasis": "RJ 240.240, RJk B8.128"
+        },
+        {
+          "checkId": "EV-020",
+          "checkText": "Wettelijke reserves (gesplitst naar aard): herwaarderingsreserves zijn vermeld.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-021",
+          "checkText": "Wettelijke reserves: kosten voor oprichting of uitgifte van aandelen zijn vermeld.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:365,2"
+        },
+        {
+          "checkId": "EV-022",
+          "checkText": "Wettelijke reserves: kosten voor ontwikkeling zijn vermeld.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:365,2"
+        },
+        {
+          "checkId": "EV-023",
+          "checkText": "Wettelijke reserves: niet uitgekeerde winst deelnemingen, voor zover uitkering beperkt is.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:389,6"
+        },
+        {
+          "checkId": "EV-024",
+          "checkText": "Wettelijke reserves: inbreng anders dan in geld (nv) is vermeld.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:373"
+        },
+        {
+          "checkId": "EV-025",
+          "checkText": "Wettelijke reserves: verschil wettelijk minimum en gestort aandelenkapitaal (nv) is vermeld.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "BW 2:67a,2"
+        },
+        {
+          "checkId": "EV-026",
+          "checkText": "De wettelijke reserve wordt opgenomen voor het aan te houden bedrag, waarbij een eventueel tekort ten laste van de 'Overige reserves' komt.",
+          "category": "Eigen vermogen - Wettelijke reserves",
+          "wettelijkeBasis": "RJ 240.230"
+        },
+        {
+          "checkId": "EV-027",
+          "checkText": "Voor kleine rechtspersonen is de informatie over reserve deelneming beperkt tot de wettelijke vereisten.",
+          "category": "Eigen vermogen - Reserve deelneming",
+          "wettelijkeBasis": "RJk B8.135"
+        }
+      ]
+    },
+    {
+      "sheetName": "Voorzieningen",
+      "items": [
+        {
+          "checkId": "VZ-001",
+          "checkText": "Totaal van de post voorzieningen is vermeld.",
+          "category": "Voorzieningen - Presentatie",
+          "wettelijkeBasis": "BW 2:374,3"
+        },
+        {
+          "checkId": "VZ-002",
+          "checkText": "De pensioenvoorziening dga wordt gewaardeerd op basis van een in Nederland algemeen aanvaarde actuariële methodiek. Uitgangspunt daarbij is de 'beste schatting' van de variabelen die de omvang van de uitgaven ter afwikkeling van de verplichting bepalen.",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "BW 2:384,5, RJ 271.318a"
+        },
+        {
+          "checkId": "VZ-003",
+          "checkText": "Wanneer de fiscale waardering niet materieel afwijkt van de 'beste schatting' mag de fiscale berekening wel worden gehanteerd.",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "RJ 115.207"
+        },
+        {
+          "checkId": "VZ-004",
+          "checkText": "Voorziening opnemen indien (ook nog na invoering 'Wet uitfasering pensioen in eigen beheer en overige fiscale pensioenmaatregelen') sprake is van pensioen in eigen beheer (dga).",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "RJ 271.318a"
+        },
+        {
+          "checkId": "VZ-005",
+          "checkText": "De gehanteerde berekeningsgrondslagen en rekenrente van een dga-pensioen in eigen beheer moeten worden vermeld.",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "BW 2:384,5, RJ 271.324"
+        },
+        {
+          "checkId": "VZ-006",
+          "checkText": "De afgestempelde post uit pensioen dga betreft dan een verplichting (ODV) die voor de fiscale boekwaarde onder de (langlopende) schulden wordt gepresenteerd.",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "RJ 271.322"
+        },
+        {
+          "checkId": "VZ-007",
+          "checkText": "Een afstempeling ná balansdatum, maar voor opmaken van de jaarrekening wordt in beginsel als gebeurtenis na balansdatum opgenomen.",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "BW 2:380a"
+        },
+        {
+          "checkId": "VZ-008",
+          "checkText": "De afgestempelde aanspraken kunnen ook worden afgekocht. Op dat moment ontstaat een schuld inzake de netto verplichting aan de dga (lang- of kortlopend) en inzake loonheffing (kortlopend).",
+          "category": "Voorzieningen - Pensioen DGA",
+          "wettelijkeBasis": "RJ 271.322"
+        },
+        {
+          "checkId": "VZ-009",
+          "checkText": "Voor andere uitgestelde beloningen beperkt de informatie (zie RJ 271) zich tot wettelijke verplichtingen.",
+          "category": "Voorzieningen - Overige pensioen",
+          "wettelijkeBasis": "RJk B14.128"
+        }
+      ]
+    },
+    {
+      "sheetName": "Schulden lange en korte termijn",
+      "items": [
+        {
+          "checkId": "SCH-001",
+          "checkText": "Totaal van de post schulden is vermeld.",
+          "category": "Schulden - Presentatie",
+          "wettelijkeBasis": "BW 2:375"
+        },
+        {
+          "checkId": "SCH-002",
+          "checkText": "Het langlopend karakter hangt af van de juridische opeisbaarheid. Als niets is overeengekomen of de looptijd is korter dan 12 maanden: opnemen onder kortlopende schulden.",
+          "category": "Schulden - Classificatie",
+          "wettelijkeBasis": "RJ 254.303"
+        },
+        {
+          "checkId": "SCH-003",
+          "checkText": "Indien langlopend: totaal en afzonderlijk te vermelden de groepen van schulden met een looptijd van langer dan 1 jaar. Kleine rechtspersonen hoeven niet uit te splitsen naar afzonderlijke groep, maar alleen het totaal.",
+          "category": "Schulden - Langlopend",
+          "wettelijkeBasis": "BW 2:375,2"
+        },
+        {
+          "checkId": "SCH-004",
+          "checkText": "Voor het totaal van de schulden tot welk bedrag de resterende looptijd langer is dan 5 jaar is vermeld.",
+          "category": "Schulden - Langlopend",
+          "wettelijkeBasis": "BW 2:375,2"
+        },
+        {
+          "checkId": "SCH-005",
+          "checkText": "De optie dat na balansdatum is overeengekomen dat een schuld niet binnen 12 maanden opeisbaar is en daarom als langlopend is gepresenteerd (art. 9 BMJ) is toegelicht.",
+          "category": "Schulden - Langlopend",
+          "wettelijkeBasis": "RJ 254.305, RJk B9.206"
+        },
+        {
+          "checkId": "SCH-006",
+          "checkText": "Mag bij vervroegde aflossing na balansdatum dat bedrag als kortlopend worden gerubriceerd. Dit moet ook worden toegelicht.",
+          "category": "Schulden - Herclassificatie",
+          "wettelijkeBasis": "RJ 254.306"
+        },
+        {
+          "checkId": "SCH-007",
+          "checkText": "Bij inwerkingtreding van voorwaarden en bepalingen bij langlopende schulden, waardoor deze feitelijk kortlopend worden, moet deze situatie worden toegelicht. Dit geldt ook bij benadering van die situatie ná balansdatum.",
+          "category": "Schulden - Herclassificatie",
+          "wettelijkeBasis": "RJ 254.408"
+        },
+        {
+          "checkId": "SCH-008",
+          "checkText": "Voor het totaal van de afzonderlijk te vermelden groepen wordt aangegeven welke zakelijke zekerheid is verstrekt en in welke vorm.",
+          "category": "Schulden - Zekerheden",
+          "wettelijkeBasis": "BW 2:375,3"
+        },
+        {
+          "checkId": "SCH-009",
+          "checkText": "Gestelde zakelijke zekerheden dienen per soort te worden vermeld.",
+          "category": "Schulden - Zekerheden",
+          "wettelijkeBasis": "RJ 254.404, RJk B9.205"
+        },
+        {
+          "checkId": "SCH-010",
+          "checkText": "Voor alle schulden wordt vermeld het bedrag waarvoor toezeggingen zijn gedaan tot het bezwaren respectievelijk niet bezwaren.",
+          "category": "Schulden - Zekerheden",
+          "wettelijkeBasis": "BW 2:375,3"
+        },
+        {
+          "checkId": "SCH-011",
+          "checkText": "Vermelding van belangrijke, niet in de balans opgenomen financiële verplichtingen, waarbij afzonderlijk te vermelden de verplichtingen jegens groepsmaatschappijen.",
+          "category": "Schulden - Overige toelichtingen",
+          "wettelijkeBasis": "BW 2:381,1"
+        },
+        {
+          "checkId": "SCH-012",
+          "checkText": "Afzonderlijke vermelding van aan bestuurders en commissarissen verstrekte garanties.",
+          "category": "Schulden - Overige toelichtingen",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "SCH-013",
+          "checkText": "Overlopende passiva: te betalen bedragen, last in dit boekjaar verantwoord.",
+          "category": "Schulden - Overlopende passiva",
+          "wettelijkeBasis": "RJ 258.102"
+        },
+        {
+          "checkId": "SCH-014",
+          "checkText": "Overlopende passiva: vooruitontvangen bedragen, bate in volgend boekjaar verantwoord.",
+          "category": "Schulden - Overlopende passiva",
+          "wettelijkeBasis": "RJ 258.102"
+        },
+        {
+          "checkId": "SCH-015",
+          "checkText": "Vakantiegelden en -dagen, inclusief sociale lasten, worden onder overlopende passiva opgenomen.",
+          "category": "Schulden - Overlopende passiva",
+          "wettelijkeBasis": "RJ 258.102"
+        }
+      ]
+    },
+    {
+      "sheetName": "Niet in de balans opgenomen verplichtingen",
+      "items": [
+        {
+          "checkId": "NBV-001",
+          "checkText": "Feitelijke verplichtingen, voorwaardelijke en niet verwerkte verplichtingen worden toegelicht.",
+          "category": "Niet in balans opgenomen verplichtingen - Presentatie",
+          "wettelijkeBasis": "BW 2:381,1, RJ 252.510"
+        },
+        {
+          "checkId": "NBV-002",
+          "checkText": "Dus ook verplichtingen waarvan de omvang niet voldoende betrouwbaar kan worden geschat.",
+          "category": "Niet in balans opgenomen verplichtingen - Presentatie",
+          "wettelijkeBasis": "RJ 252.508"
+        },
+        {
+          "checkId": "NBV-003",
+          "checkText": "Verplichtingen onder opschortende voorwaarden worden toegelicht als zij niet in de balans zijn opgenomen.",
+          "category": "Niet in balans opgenomen verplichtingen - Presentatie",
+          "wettelijkeBasis": "RJ 254.108"
+        },
+        {
+          "checkId": "NBV-004",
+          "checkText": "Garantie uit hoofde van aansprakelijkheid voor schulden dochters is vermeld indien van toepassing.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "BW 2:403,1f"
+        },
+        {
+          "checkId": "NBV-005",
+          "checkText": "Garantie verstrekt aan bestuurders, commissarissen en/of dochtermaatschappijen is vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "NBV-006",
+          "checkText": "Aansprakelijkheid uit hoofde van fiscale eenheid is vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "BW 2.376"
+        },
+        {
+          "checkId": "NBV-007",
+          "checkText": "Volledige aansprakelijkheid als vennoot van een vof of CV is vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "RJ 214.617"
+        },
+        {
+          "checkId": "NBV-008",
+          "checkText": "Verplichtingen door deelname aan een coöperatieve vereniging zijn vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "BW 2:381,1"
+        },
+        {
+          "checkId": "NBV-009",
+          "checkText": "Verplichtingen uit hoofde van ketenaansprakelijkheid zijn vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Voorbeelden",
+          "wettelijkeBasis": "BW 2:381,1"
+        },
+        {
+          "checkId": "NBV-010",
+          "checkText": "Totaalbedrag langlopende gebruikersrechten, alleen voor (middel)groot ook gesplitst naar looptijd van meer dan 1 jaar en meer dan 5 jaar.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "RJ 252.514"
+        },
+        {
+          "checkId": "NBV-011",
+          "checkText": "Off balance financiering is vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "BW 2:381,1"
+        },
+        {
+          "checkId": "NBV-012",
+          "checkText": "Abnormaal grote afname- of leveringsplicht uit in- en verkoopcontracten inzake voorraden is vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "RJ 252.516"
+        },
+        {
+          "checkId": "NBV-013",
+          "checkText": "Materiële vaste activa in bestelling zijn vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "RJ 212.604"
+        },
+        {
+          "checkId": "NBV-014",
+          "checkText": "Verplichtingen waarvan zowel de prestatie als de tegenprestatie nog moet worden geleverd zijn vermeld.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "BW 2:381,1"
+        },
+        {
+          "checkId": "NBV-015",
+          "checkText": "Afzonderlijk vermelden de verplichtingen ten behoeve van groepsmaatschappijen.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "BW 2:383,2, RJ 252.517"
+        },
+        {
+          "checkId": "NBV-016",
+          "checkText": "Vermelden gestelde zekerheden voor het totaal van de in BW 2:375,1 vermelde groepen.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "BW 2:375,3"
+        },
+        {
+          "checkId": "NBV-017",
+          "checkText": "Aangegane waarborgverplichtingen jegens groepsmaatschappijen: ingedeeld naar de vorm van de geboden zekerheden.",
+          "category": "Niet in balans opgenomen verplichtingen - Meerjarig",
+          "wettelijkeBasis": "BW 2:376"
+        }
+      ]
+    },
+    {
+      "sheetName": "Winst- en verliesrekening",
+      "items": [
+        {
+          "checkId": "WVL-001",
+          "checkText": "De methode van toerekening aan de perioden is vermeld.",
+          "category": "Winst- en verliesrekening - Grondslagen",
+          "wettelijkeBasis": "BW 2:377"
+        },
+        {
+          "checkId": "WVL-002",
+          "checkText": "De splitsing van de bedragen van de opbrengsten over elk van de belangrijke categorieën is vermeld.",
+          "category": "Winst- en verliesrekening - Opbrengsten",
+          "wettelijkeBasis": "BW 2:377"
+        },
+        {
+          "checkId": "WVL-003",
+          "checkText": "Vermelding van de bedragen van de ruiltransacties per genoemde categorie.",
+          "category": "Winst- en verliesrekening - Opbrengsten",
+          "wettelijkeBasis": "BW 2:377"
+        },
+        {
+          "checkId": "WVL-004",
+          "checkText": "Als de instelling valt onder de Wet normering topinkomens (WNT), gelden aanvullende toelichtingsvereisten van die wet inzake de bezoldiging van diverse (top)functionarissen.",
+          "category": "Winst- en verliesrekening - WNT",
+          "wettelijkeBasis": "WNT"
+        },
+        {
+          "checkId": "WVL-005",
+          "checkText": "Voor kleine rechtspersonen is alleen vermelding van het gemiddeld aantal werknemers verplicht.",
+          "category": "Winst- en verliesrekening - Personeel",
+          "wettelijkeBasis": "BW 2:382, BW 2:396,5"
+        }
+      ]
+    },
+    {
+      "sheetName": "Overige toelichtingen",
+      "items": [
+        {
+          "checkId": "OVT-001",
+          "checkText": "Naam van de rechtspersoon is vermeld.",
+          "category": "Overige toelichtingen - Identificatie",
+          "wettelijkeBasis": "BW 2:380b"
+        },
+        {
+          "checkId": "OVT-002",
+          "checkText": "Rechtsvorm is vermeld.",
+          "category": "Overige toelichtingen - Identificatie",
+          "wettelijkeBasis": "BW 2:380b"
+        },
+        {
+          "checkId": "OVT-003",
+          "checkText": "Zetel is vermeld.",
+          "category": "Overige toelichtingen - Identificatie",
+          "wettelijkeBasis": "BW 2:380b"
+        },
+        {
+          "checkId": "OVT-004",
+          "checkText": "KvK-nummer is vermeld.",
+          "category": "Overige toelichtingen - Identificatie",
+          "wettelijkeBasis": "BW 2:380b"
+        },
+        {
+          "checkId": "OVT-005",
+          "checkText": "De grondslagen van waardering van activa en passiva en de resultaatbepaling, waaronder de kosten die in de voorraden zijn begrepen, zijn vermeld.",
+          "category": "Overige toelichtingen - Algemeen",
+          "wettelijkeBasis": "BW 2:384,5"
+        },
+        {
+          "checkId": "OVT-006",
+          "checkText": "De wijzigingen in de grondslagen en in de presentatie, alsmede de reden daarvoor en de invloed op de cijfers zijn vermeld.",
+          "category": "Overige toelichtingen - Algemeen",
+          "wettelijkeBasis": "BW 2:363,4, BW 2:363,5"
+        },
+        {
+          "checkId": "OVT-007",
+          "checkText": "De behandeling van belastingen, vreemde valuta, immateriële vaste activa en belangrijke bijzondere voorzieningen is toegelicht.",
+          "category": "Overige toelichtingen - Algemeen",
+          "wettelijkeBasis": "RJ 300.105, RJk B18.104"
+        },
+        {
+          "checkId": "OVT-008",
+          "checkText": "De doorslaggevende betekenis van bepaalde gebeurtenissen voor de interpretatie van de jaarrekening is toegelicht.",
+          "category": "Overige toelichtingen - Algemeen",
+          "wettelijkeBasis": "RJ 300.105, RJk B18.104"
+        },
+        {
+          "checkId": "OVT-009",
+          "checkText": "Voor zover van toepassing worden de consolidatiegrondslagen vermeld.",
+          "category": "Overige toelichtingen - Consolidatie",
+          "wettelijkeBasis": "RJ 300.103, RJk B18.102"
+        }
+      ]
+    },
+    {
+      "sheetName": "Commerciële stichtingen en verenigingen",
+      "items": [
+        {
+          "checkId": "CSV-001",
+          "checkText": "Alle commerciële stichtingen en verenigingen moeten de netto omzet van de door hen in stand gehouden ondernemingen vermelden, ook als deze niet de grens van 7,5 mio omzet overschrijdt.",
+          "category": "Commerciële stichtingen - Omzet",
+          "wettelijkeBasis": "BW 2:299a, BW 2:48,3"
+        },
+        {
+          "checkId": "CSV-002",
+          "checkText": "Indien tegen niet-marktconforme prijzen wordt gewerkt, wordt hiervan in de toelichting melding gemaakt en wordt zo mogelijk het effect daarvan op resultaat en vermogen gekwantificeerd.",
+          "category": "Commerciële stichtingen - Prijzen",
+          "wettelijkeBasis": "RJ 630.301"
+        },
+        {
+          "checkId": "CSV-003",
+          "checkText": "Beloning bestuurders: verstrekte leningen, voorschotten en garanties verstrekt door de rechtspersoon of dochtermaatschappijen of geconsolideerde maatschappijen moeten altijd worden vermeld.",
+          "category": "Commerciële stichtingen - Bestuurders",
+          "wettelijkeBasis": "BW 2:383,2"
+        },
+        {
+          "checkId": "CSV-004",
+          "checkText": "De Wet normering topinkomens (WNT) kan van toepassing zijn, waardoor aanvullende toelichtingsvereisten gelden.",
+          "category": "Commerciële stichtingen - WNT",
+          "wettelijkeBasis": "RJ 271.7"
+        }
+      ]
+    },
+    {
+      "sheetName": "Concernverhoudingen",
+      "items": [
+        {
+          "checkId": "CON-001",
+          "checkText": "Voor de diverse waarderingsgrondslagen zie Financiële vaste activa.",
+          "category": "Concernverhoudingen - Waardering",
+          "wettelijkeBasis": "BW 2:389"
+        },
+        {
+          "checkId": "CON-002",
+          "checkText": "De eisen aan de toelichting zijn gelijk aan die bij de enkelvoudige jaarrekening. Gegevens die al in de enkelvoudige jaarrekening zijn vermeld kunnen achterwege blijven.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-003",
+          "checkText": "Toelichtingseis bij geactiveerde oprichtings-, emissie- en ontwikkelingskosten.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-004",
+          "checkText": "Verloop eigen vermogen is vermeld.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-005",
+          "checkText": "Lijst met deelnemingen is opgenomen.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-006",
+          "checkText": "Bezoldigingen van en leningen aan bestuurders en commissarissen zijn vermeld.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-007",
+          "checkText": "Vormen van reserve ingehouden winsten van deelnemingen zijn vermeld.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-008",
+          "checkText": "Toelichtingseis van het niet toepassen van netto-vermogenswaarde op deelnemingen.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-009",
+          "checkText": "Vormen van herwaarderingsreserve bij toepassing van actuele waarde.",
+          "category": "Concernverhoudingen - Presentatie",
+          "wettelijkeBasis": "BW 2:410,1"
+        },
+        {
+          "checkId": "CON-010",
+          "checkText": "Geen uitsplitsing voorraden als dit een onevenredige inspanning vergt.",
+          "category": "Concernverhoudingen - Specifieke bepalingen",
+          "wettelijkeBasis": "BW 2:410,2"
+        },
+        {
+          "checkId": "CON-011",
+          "checkText": "Als een buitenlandse rechtspersoon mede aan het hoofd van de groep staat mag dat groepsdeel volgens het buitenlands recht worden geconsolideerd. Invloed hiervan op vermogen en resultaat moet worden toegelicht.",
+          "category": "Concernverhoudingen - Specifieke bepalingen",
+          "wettelijkeBasis": "BW 2:410,4"
+        },
+        {
+          "checkId": "CON-012",
+          "checkText": "Gegevens over werknemers (ex art. 2:382 BW) moeten gesplitst worden in die voor volledig geconsolideerde en die voor proportioneel geconsolideerde maatschappijen.",
+          "category": "Concernverhoudingen - Specifieke bepalingen",
+          "wettelijkeBasis": "BW 2:410,5"
+        },
+        {
+          "checkId": "CON-013",
+          "checkText": "Geen uitsplitsing van eigen vermogen.",
+          "category": "Concernverhoudingen - Specifieke bepalingen",
+          "wettelijkeBasis": "BW 2:411,1"
+        },
+        {
+          "checkId": "CON-014",
+          "checkText": "De rechtspersoon geeft een toelichting over het aandeel derden als dit voor het vereiste inzicht noodzakelijk is.",
+          "category": "Concernverhoudingen - Specifieke bepalingen",
+          "wettelijkeBasis": "RJ 217.602"
+        },
+        {
+          "checkId": "CON-015",
+          "checkText": "Kleine rechtspersonen moeten alleen de wijze van verwerking van de fusie of overname toelichten.",
+          "category": "Concernverhoudingen - Fusies en overnames",
+          "wettelijkeBasis": "RJk B3.203"
+        },
+        {
+          "checkId": "CON-016",
+          "checkText": "Tussenconsolidatie vrijstelling is van toepassing indien voldaan aan de voorwaarden.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:408,1"
+        },
+        {
+          "checkId": "CON-017",
+          "checkText": "Deze consolidatievrijstelling geldt echter niet voor een rechtspersoon waarvan effecten zijn toegelaten op een gereglementeerde markt.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:408,4, RJ 217.214a"
+        },
+        {
+          "checkId": "CON-018",
+          "checkText": "Sterk vereenvoudigde winst-en-verliesrekening moedermaatschappij, tenzij het een OOB betreft zoals bedoeld in art. 2:398 lid 7 BW.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:402"
+        },
+        {
+          "checkId": "CON-019",
+          "checkText": "Consolidatievrijstelling voor de beheer- en financieringsmaatschappij zelf, voor zover deze art. 2:389 BW toegepast.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:407,3"
+        },
+        {
+          "checkId": "CON-020",
+          "checkText": "Consolidatievrijstelling als de te consolideren maatschappij van te verwaarlozen betekenis is voor het geheel.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:407,1a"
+        },
+        {
+          "checkId": "CON-021",
+          "checkText": "Consolidatievrijstelling als de gegevens van de te consolideren maatschappij slechts tegen onevenredige kosten of met grote vertraging te verkrijgen zijn.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:407,1b"
+        },
+        {
+          "checkId": "CON-022",
+          "checkText": "Consolidatievrijstelling als het belang slechts wordt gehouden om te vervreemden.",
+          "category": "Concernverhoudingen - Vrijstellingen",
+          "wettelijkeBasis": "BW 2:407,1c"
+        },
+        {
+          "checkId": "CON-023",
+          "checkText": "Reeds geconsolideerde deelnemingen blijven veelal tot daadwerkelijke afstoting in de consolidatie betrokken.",
+          "category": "Concernverhoudingen - Vervreemding",
+          "wettelijkeBasis": "RJ 217.304"
+        },
+        {
+          "checkId": "CON-024",
+          "checkText": "Het verkoopbesluit moet zijn genomen en met de uitvoering is feitelijk een begin gemaakt en het is niet te verwachten dat dit verkoopplan fundamenteel wijzigt.",
+          "category": "Concernverhoudingen - Vervreemding",
+          "wettelijkeBasis": "RJ 217.305"
+        },
+        {
+          "checkId": "CON-025",
+          "checkText": "Participatiemaatschappijen kunnen, onder de voorwaarde dat de meerderheidsbelangen als effecten worden gerubriceerd en specifieke toelichtingen worden verstrekt over onder meer toepassing en reden, ook gebruik maken van de vrijstelling op grond van art. 2:407 lid 1c BW.",
+          "category": "Concernverhoudingen - Participatiemaatschappijen",
+          "wettelijkeBasis": "RJ 217.308 e.v."
+        },
+        {
+          "checkId": "CON-026",
+          "checkText": "Een persoonlijke houdstermaatschappij behoort mogelijk niet tot de groep als deze voornamelijk de belangen van de grootaandeelhouder behartigt. De houdster hoeft dan niet te worden meegeconsolideerd. Bij het houden van meerdere belangen zal de houdstermaatschappij eerder als groepshoofd kunnen worden aangemerkt.",
+          "category": "Concernverhoudingen - Houdstermaatschappij",
+          "wettelijkeBasis": "RJ 217.209"
+        }
+      ]
+    },
+    {
+      "sheetName": "Financiële instrumenten",
+      "items": [
+        {
+          "checkId": "FIN-001",
+          "checkText": "Als de actuele waarde wordt bepaald met modellen worden de aannames vermeld.",
+          "category": "Financiële instrumenten - Actuele waarde",
+          "wettelijkeBasis": "BW 2:381a"
+        },
+        {
+          "checkId": "FIN-002",
+          "checkText": "Per categorie worden vermeld de actuele waarde en de waardeveranderingen die in de resultaten, de herwaarderingsreserve of andere reserves zijn verwerkt.",
+          "category": "Financiële instrumenten - Actuele waarde",
+          "wettelijkeBasis": "BW 2:381a"
+        },
+        {
+          "checkId": "FIN-003",
+          "checkText": "Per categorie afgeleide financiële instrumenten worden vermeld de omvang en aard van de financiële instrumenten alsmede de voorwaarden die op de toekomstige kasstromen van invloed kunnen zijn.",
+          "category": "Financiële instrumenten - Derivaten",
+          "wettelijkeBasis": "BW 2:381a"
+        },
+        {
+          "checkId": "FIN-004",
+          "checkText": "Voor financiële vaste activa die boven de actuele waarde gewaardeerd zijn worden vermeld de boekwaarde en de actuele waarde van de afzonderlijke activa en de reden waarom de boekwaarde niet is verminderd.",
+          "category": "Financiële instrumenten - Niet actuele waarde",
+          "wettelijkeBasis": "BW 2:381b"
+        },
+        {
+          "checkId": "FIN-005",
+          "checkText": "Samengestelde instrumenten (de componenten zijn financiële verplichting, financieel actief of eigenvermogensinstrument) moeten worden gesplitst als de delen afzonderlijk identificeerbaar zijn, bijv. warrants.",
+          "category": "Financiële instrumenten - Samengesteld",
+          "wettelijkeBasis": "RJ 290.813"
+        },
+        {
+          "checkId": "FIN-006",
+          "checkText": "Financiële activa en financiële verplichtingen moeten in beginsel ongesaldeerd worden gepresenteerd.",
+          "category": "Financiële instrumenten - Presentatie",
+          "wettelijkeBasis": "RJ 290.503"
+        },
+        {
+          "checkId": "FIN-007",
+          "checkText": "Dit geldt niet voor een financieel actief en een financiële verplichting, als de bevoegdheid en ook het stellige voornemen bestaat tot (netto of simultaan) verrekenen.",
+          "category": "Financiële instrumenten - Saldering",
+          "wettelijkeBasis": "RJ 290.837"
+        },
+        {
+          "checkId": "FIN-008",
+          "checkText": "Bij het voldoen aan voorwaarden moeten in een contract besloten derivaten (embedded derivaten) worden gescheiden van het basiscontract. Dit geldt ook voor derivaten die niet tegen reële waarde worden gewaardeerd.",
+          "category": "Financiële instrumenten - Embedded derivaten",
+          "wettelijkeBasis": "RJ 290.827"
+        },
+        {
+          "checkId": "FIN-009",
+          "checkText": "In de toelichting moeten grondslagen van waardering en resultaatbepaling en voorwaarden worden vermeld.",
+          "category": "Financiële instrumenten - Toelichting",
+          "wettelijkeBasis": "BW 2:384,5, RJ 290.906"
+        },
+        {
+          "checkId": "FIN-010",
+          "checkText": "Aanbevolen wordt de mate van gebruik, de daaraan verbonden risico's en de bedrijfsdoeleinden uiteen te zetten.",
+          "category": "Financiële instrumenten - Toelichting",
+          "wettelijkeBasis": "RJ 290.901"
+        },
+        {
+          "checkId": "FIN-011",
+          "checkText": "Aanbevolen wordt om rekening te houden met het relatieve belang van de financiële instrumenten om te voorkomen dat door een overvloedige hoeveelheid informatie het inzicht vertroebeld wordt.",
+          "category": "Financiële instrumenten - Toelichting",
+          "wettelijkeBasis": "RJ 290.904"
+        },
+        {
+          "checkId": "FIN-012",
+          "checkText": "De vereiste toelichting is afhankelijk van het grootte-regime. Niettemin beveelt de RJ aan ongeacht het regime toelichting te geven over: reële waarde.",
+          "category": "Financiële instrumenten - Toelichting",
+          "wettelijkeBasis": "RJ 290.937"
+        },
+        {
+          "checkId": "FIN-013",
+          "checkText": "Renterisico: risico dat de waarde fluctueert door wijzigingen in de marktrente.",
+          "category": "Financiële instrumenten - Risico's",
+          "wettelijkeBasis": "RJ 290.9"
+        },
+        {
+          "checkId": "FIN-014",
+          "checkText": "Kasstroomrisico: risico dat kasstromen in omvang kunnen fluctueren.",
+          "category": "Financiële instrumenten - Risico's",
+          "wettelijkeBasis": "RJ 290.9"
+        },
+        {
+          "checkId": "FIN-015",
+          "checkText": "Liquiditeitsrisico: risico dat financiële middelen ontbreken om aan verplichtingen te kunnen voldoen.",
+          "category": "Financiële instrumenten - Risico's",
+          "wettelijkeBasis": "RJ 940"
+        },
+        {
+          "checkId": "FIN-016",
+          "checkText": "De informatie over het rente-, kasstroom- en liquiditeitsrisico moet ook de effecten van hedge-instrumenten weergeven.",
+          "category": "Financiële instrumenten - Risico's",
+          "wettelijkeBasis": "RJ 290.918"
+        },
+        {
+          "checkId": "FIN-017",
+          "checkText": "Beschreven moeten worden doelstellingen en beleid inzake risicobeheer met inbegrip van het beleid over hedging.",
+          "category": "Financiële instrumenten - Risicobeheer",
+          "wettelijkeBasis": "RJ 290.913"
+        },
+        {
+          "checkId": "FIN-018",
+          "checkText": "Inzake de reële-waardehedges worden per hedge-strategie beschreven de hedge-strategie, het hedge-instrument, de aard van de afgedekte risico's en de toekomstige kasstromen en het tijdstip van verwachte transacties en mutaties in het eigen vermogen.",
+          "category": "Financiële instrumenten - Hedging",
+          "wettelijkeBasis": "RJ 290.913"
+        },
+        {
+          "checkId": "FIN-019",
+          "checkText": "Als een hedgerelatie tot een significant liquiditeitsrisico leidt, moeten aard, omvang, omstandigheden en moment waarop kasstromen of verplichtingen zich kunnen voordoen worden vermeld.",
+          "category": "Financiële instrumenten - Hedging",
+          "wettelijkeBasis": "RJ 290.913"
+        },
+        {
+          "checkId": "FIN-020",
+          "checkText": "Daarnaast gelden regels voor risico's in verband met toekomstige verkopen en voor de resultaten van een kasstroomhedge die direct in het eigen vermogen is verwerkt.",
+          "category": "Financiële instrumenten - Hedging",
+          "wettelijkeBasis": "RJ 290.913"
+        },
+        {
+          "checkId": "FIN-021",
+          "checkText": "Bij toepassing van kostprijshedge-accounting moet per elke balansdatum de ineffectiviteit worden bepaald. Als en voor zover de ineffectiviteit op balansdatum resulteert in een cumulatief verlies moet de ineffectiviteit in de winst-en-verliesrekening worden verwerkt.",
+          "category": "Financiële instrumenten - Ineffectiviteit",
+          "wettelijkeBasis": "RJ 290.634"
+        }
+      ]
+    }
+  ],
+  "totalChecks": 183,
+  "abbreviations": {
+    "i": "Inrichtingsjaarrekening (intern gebruik)",
+    "d": "Deponeringsjaarrekening (deponering bij KvK)",
+    "i+d": "Beide van toepassing",
+    "BW": "Burgerlijk Wetboek",
+    "RJ": "Richtlijnen voor de Jaarverslaggeving",
+    "RJk": "Richtlijnen voor de Jaarverslaggeving (kleine rechtspersonen)",
+    "K": "Kleine rechtspersoon",
+    "M": "Middelgrote rechtspersoon",
+    "G": "Grote rechtspersoon",
+    "WNT": "Wet normering topinkomens",
+    "KvK": "Kamer van Koophandel",
+    "OOB": "Organisatie van Openbaar Belang"
+  }
+}   

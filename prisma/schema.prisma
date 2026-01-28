@@ -1,0 +1,173 @@
+// Prisma schema for SRA Checker MVP
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// BetterAuth User model
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  name          String?
+  emailVerified Boolean   @default(false)
+  image         String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  sessions  Session[]
+  accounts  Account[]
+  passkeys  Passkey[]
+}
+
+// Passkey credentials for WebAuthn
+model Passkey {
+  id                String   @id @default(cuid())
+  name              String?
+  publicKey         String
+  userId            String
+  credentialID      String   @unique
+  counter           Int
+  deviceType        String
+  backedUp          Boolean
+  transports        String?
+  createdAt         DateTime @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Account {
+  id                    String    @id @default(cuid())
+  userId                String
+  accountId             String
+  providerId            String
+  accessToken           String?
+  refreshToken          String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  idToken               String?
+  password              String?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Verification {
+  id         String   @id @default(cuid())
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+// Document storage for uploaded PDFs
+model Document {
+  id           String   @id @default(cuid())
+  userId       String   // Can be 'anonymous' for unauthenticated uploads
+  filename     String
+  originalName String
+  pdfData      Bytes    // PDF file stored as binary data in database
+  mimeType     String
+  size         Int
+  pageCount    Int      @default(0)
+  processed    Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Note: No foreign key constraint to allow anonymous uploads
+  chunks    DocumentChunk[]
+  checkRuns CheckRun[]
+}
+
+// Document chunks for RAG
+model DocumentChunk {
+  id          String   @id @default(cuid())
+  documentId  String
+  pageNumber  Int
+  chunkIndex  Int
+  content     String
+  embedding   String?  // JSON string of embedding vector
+  createdAt   DateTime @default(now())
+
+  document Document @relation(fields: [documentId], references: [id], onDelete: Cascade)
+
+  @@index([documentId, pageNumber])
+}
+
+// Checklist items from the SRA checklist
+model ChecklistItem {
+  id              String   @id @default(cuid())
+  sheetName       String
+  checkId         String
+  checkText       String
+  category        String?
+  wettelijkeBasis String?  // Legal basis (e.g., "art. 2:364 BW")
+  applicableTypes String   // JSON array of applicable types (e.g., ["i+d"])
+  order           Int      @default(0)
+  createdAt       DateTime @default(now())
+
+  results CheckResult[]
+
+  @@unique([sheetName, checkId])
+  @@index([sheetName])
+}
+
+// Check run (job) for processing
+model CheckRun {
+  id         String   @id @default(cuid())
+  userId     String   // Can be 'anonymous' for unauthenticated runs
+  documentId String
+  sheetName  String
+  status     String   @default("pending") // pending, processing, completed, failed
+  progress   Int      @default(0)         // 0-100
+  totalItems Int      @default(0)
+  error      String?
+  startedAt  DateTime?
+  completedAt DateTime?
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  // Note: No foreign key constraint to allow anonymous runs
+  document Document      @relation(fields: [documentId], references: [id], onDelete: Cascade)
+  results  CheckResult[]
+
+  @@index([userId, status])
+}
+
+// Individual check results
+model CheckResult {
+  id              String   @id @default(cuid())
+  checkRunId      String
+  checklistItemId String
+  status          String   // PASS, FAIL, UNKNOWN
+  reasoning       String
+  evidence        String   // JSON array of { page: number, quote: string }
+  confidence      Float    @default(0)
+  processingTime  Int?     // milliseconds
+  createdAt       DateTime @default(now())
+
+  checkRun      CheckRun      @relation(fields: [checkRunId], references: [id], onDelete: Cascade)
+  checklistItem ChecklistItem @relation(fields: [checklistItemId], references: [id], onDelete: Cascade)
+
+  @@unique([checkRunId, checklistItemId])
+  @@index([checkRunId])
+}

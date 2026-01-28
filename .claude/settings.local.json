@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm init -y)",
+      "Bash(npm install:*)",
+      "Bash(node analyze-excel.js:*)",
+      "Bash(timeout 60 node:*)",
+      "Bash(node -e:*)",
+      "Bash(xxd:*)",
+      "Bash(pkill:*)",
+      "Bash(timeout 30 node:*)",
+      "Bash(npx create-next-app@latest:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx prisma migrate dev:*)",
+      "Bash(node scripts/analyze-excel.js:*)",
+      "Bash(ls:*)",
+      "Bash(python3:*)",
+      "Bash(npm rebuild:*)",
+      "Bash(npx prisma generate:*)",
+      "Bash(cat:*)",
+      "Bash(curl:*)",
+      "Bash(timeout 15 npm run dev:*)"
+    ]
+  }
+}
