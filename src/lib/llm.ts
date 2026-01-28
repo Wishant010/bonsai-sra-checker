@@ -1,12 +1,19 @@
 import OpenAI from 'openai';
 import { RetrievedChunk } from './embeddings';
 
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
-});
-
 // Using GPT-4o-mini for cost-effectiveness while maintaining quality
 const LLM_MODEL = 'gpt-4o-mini';
+
+// Lazy initialization to avoid crash when OPENAI_API_KEY is not set at build time
+let _openai: OpenAI | null = null;
+function getOpenAI(): OpenAI {
+  if (!_openai) {
+    _openai = new OpenAI({
+      apiKey: process.env.OPENAI_API_KEY,
+    });
+  }
+  return _openai;
+}
 
 export interface Evidence {
   page: number;
@@ -82,7 +89,7 @@ ${context}
 Beoordeel of dit criterium voldaan is in de jaarrekening. Antwoord in JSON formaat.`;
 
   try {
-    const response = await openai.chat.completions.create({
+    const response = await getOpenAI().chat.completions.create({
       model: LLM_MODEL,
       messages: [
         { role: 'system', content: systemPrompt },
